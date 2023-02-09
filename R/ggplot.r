@@ -16,7 +16,7 @@
 #'   (g + theme_ns() + labs(title="theme_ns"))
 theme_ns <- function() {
   list(
-    ggplot2::theme_bw(),
+    ggplot2::theme_minimal(),
     ggplot2::theme(
       # Margins
       plot.margin      = margin(rep(1, 4), "pt"),
@@ -35,10 +35,23 @@ theme_ns <- function() {
       legend.position  = "bottom",
       legend.direction = "horizontal", ## Levels within an aesthetic
       legend.box       = "vertical",   ## Between aesthetics
-    ),
-    ggplot2::scale_color_brewer(palette = "Dark2"),
-    ggplot2::scale_fill_brewer(palette = "Dark2")
+    )#,
+    # ggplot2::scale_color_brewer(palette = "Dark2"),
+    # ggplot2::scale_fill_brewer(palette = "Dark2")
   )
+}
+
+theme_spinifex <- function(){
+  ## Bring over a theme similar spinifex's
+}
+
+nsGgplotly <- function(){
+  ## See spinifex's animate_plotyly, make a themed plotly::ggplotly
+}
+plotly::ggplotly()
+
+nsGganimate <- function(){
+  ## See spinifex's animate_gganimate, make a themed gganimate animation
 }
 
 
