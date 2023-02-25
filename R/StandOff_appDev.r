@@ -1,4 +1,4 @@
-
+## Deving out posible functions for a faceoff (4D tic tac toe) app.
 
 cube.dotline <- function(
     p = 4,
